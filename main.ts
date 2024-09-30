@@ -34,6 +34,7 @@ let myRock: Sprite = null
 let mySat: Sprite = null
 let projectile: Sprite = null
 let myShip: Sprite = null
+game.splash("Save The Galaxy", "By James")
 scene.setBackgroundImage(img`
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
@@ -298,6 +299,7 @@ myShip = sprites.create(img`
     . . . 4 . 5 4 5 5 . 4 . . . 
     . . . . . . . 4 . . . . . . 
     `, SpriteKind.Player)
+myShip.y = 120
 controller.moveSprite(myShip)
 myShip.setStayInScreen(true)
 animation.runImageAnimation(
